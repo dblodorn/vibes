@@ -1,0 +1,19 @@
+{
+	"global": {
+		"site_title": "🌎",
+		"language": "en",
+		"home_link": "/"
+	},
+  "nav": [
+    {
+      "slug": "",
+      "title": "home"
+    }
+  ],
+  "home": {
+    "description": "Trippy Vibes",
+    "keywords": "static site, html, css, javascript, wow",
+    "title": "🌎",
+    "body_class": "viber"
+  }
+}
