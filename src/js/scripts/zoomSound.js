@@ -2,7 +2,7 @@ import { tween, easing, styler } from 'popmotion'
 import { FMSynth, PingPongDelay } from  'tone'
 import quantizeNumber from 'quantize-number'
 
-export default () => {
+export default (config) => {
   const ball = document.querySelector('#ball')
   const ballStyler = styler(ball)
 
@@ -15,15 +15,15 @@ export default () => {
 
   const audioVis = (val) => {
     ballStyler.set(val)
-    fm.triggerAttackRelease(quantizeNumber((val.rotate * 2), 20), '6n');
+    fm.triggerAttackRelease(quantizeNumber((val.rotate * config.pitch), config.quant), '6n');
   }
 
   const updateCounter = (v) => audioVis(v);
 
   tween({
     from: 0,
-    to: { rotate: 180, scale: 20 },
-    duration: 5000,
+    to: { rotate: config.rotate, scale: 20 },
+    duration: config.time,
     ease: easing.linear,
     flip: Infinity
   }).start(updateCounter)

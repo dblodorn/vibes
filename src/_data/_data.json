@@ -6,14 +6,24 @@
 	},
   "nav": [
     {
-      "slug": "",
+      "slug": "/",
       "title": "home"
+    },
+    {
+      "slug": "/boing.html",
+      "title": "boing"
     }
   ],
   "home": {
     "description": "Trippy Vibes",
-    "keywords": "static site, html, css, javascript, wow",
+    "keywords": "3d worlds animating in spin force.",
     "title": "🌎",
     "body_class": "viber"
+  },
+  "boing": {
+    "description": "Trippy Vibes",
+    "keywords": "3d worlds animating in spin force.",
+    "title": "🌔",
+    "body_class": "sliber"
   }
 }
