@@ -12,6 +12,10 @@
     {
       "slug": "/boing.html",
       "title": "boing"
+    },
+    {
+      "slug": "/zoing.html",
+      "title": "zoing"
     }
   ],
   "home": {
@@ -25,5 +29,11 @@
     "keywords": "3d worlds animating in spin force.",
     "title": "🌔",
     "body_class": "sliber"
+  },
+  "zoing": {
+    "description": "Trippy Vibes",
+    "keywords": "3d worlds animating in spin force.",
+    "title": "☄️",
+    "body_class": "zliber"
   }
 }

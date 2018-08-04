@@ -17,6 +17,13 @@ const Loaded = () => {
       rotate: 360,
       pitch: 4
     })
+  } else if (body.classList.contains('zliber')) {
+    zoomSound({
+      time: 1000,
+      quant: 60,
+      rotate: 260,
+      pitch: 1
+    })
   }
 }
 
