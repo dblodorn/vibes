@@ -29,14 +29,19 @@ export default () => {
     fm.triggerAttackRelease(quantizeNumber(v, 2) * 10, '8n')
   })
 
+  var texture = new THREE.TextureLoader().load( "/assets/textures/rag1.jpg" );
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set( 1, 1 );
+
   // Create a Cube Mesh with basic material
-  var geometry = new THREE.BoxGeometry(1, 1, 1)
-  var material = new THREE.MeshPhongMaterial({color:"#ffffff"})
+  var geometry = new THREE.BoxGeometry(1, 21, 1)
+  var material = new THREE.MeshPhongMaterial({map: texture, overdraw: 0.5})
   var cube = new THREE.Mesh( geometry, material )
   scene.add( cube )
 
   const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
-  const spherematerial = new THREE.MeshPhongMaterial({ color: 0xffffff });
+  const spherematerial = new THREE.MeshPhongMaterial({map: texture, overdraw: 0.5});
   const sphere = new THREE.Mesh(sphereGeometry, spherematerial);
   scene.add(sphere);
 
@@ -54,7 +59,7 @@ export default () => {
   // scene.add(gridHelper)
 
   // Add lights
-  var spotLight = new THREE.SpotLight(0xffff00)
+  var spotLight = new THREE.SpotLight(0xffffff)
   spotLight.position.set(100, 1000, 100)
   spotLight.castShadow = true
   scene.add(spotLight)
