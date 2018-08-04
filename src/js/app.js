@@ -1,4 +1,5 @@
 import zoomSound from './scripts/zoomSound'
+import threeSound from './scripts/threeSound'
 
 const body = document.querySelector('body')
 
@@ -18,12 +19,7 @@ const Loaded = () => {
       pitch: 4
     })
   } else if (body.classList.contains('zliber')) {
-    zoomSound({
-      time: 1000,
-      quant: 60,
-      rotate: 260,
-      pitch: 1
-    })
+    threeSound()
   }
 }
 
